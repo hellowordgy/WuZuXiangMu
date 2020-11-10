@@ -89,6 +89,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="scrpit\bootstrap.css" />
+    <Content Include="scrpit\jquery-3.3.1.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
