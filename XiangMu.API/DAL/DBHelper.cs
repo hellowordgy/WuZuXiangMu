@@ -12,7 +12,7 @@ namespace XiangMu.API.DAL
 {
     public class DBHelper
     {
-        public static string strConn = "Data Source=192.168.3.29;Initial Catalog=Logistics_5;User ID=sa;password=123456;Enlist=true;Pooling=true;Max Pool Size=300;Min Pool Size=0;Connection Lifetime=300;user id=sa;packet size=1000";
+        public static string strConn = "Data Source=192.168.3.29;Initial Catalog=Logistics;User ID=sa;password=123456;Enlist=true;Pooling=true;Max Pool Size=300;Min Pool Size=0;Connection Lifetime=300;user id=sa;packet size=1000";
         //public static string strConn = ConfigurationManager.ConnectionStrings["SQLConnString"].ConnectionString;
 
 
