@@ -1,0 +1,86 @@
+﻿@model IEnumerable<XiangMu.MVC.Model.Withs>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>WithsIndex</title>
+ 
+   
+</head>
+<body>
+    <p>
+        @Html.ActionLink("添加", "WithsCreate")
+    </p>
+  
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                <input id="Checkbox" type="checkbox" onclick="quan()" />
+            </th>
+            <th>
+                跟车员名称
+            </th>
+            <th>
+                籍贯
+            </th>
+            <th>
+                身份证
+            </th>
+            <th>
+                联系方式
+            </th>
+            <th>
+                家庭住址
+            </th>
+            <th>
+                备注
+            </th>
+            <th>
+                图片
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            <input class="Checkbox1" type="checkbox" value="@item.ID" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WNative)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WIdentity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WSite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WRemark)
+        </td>
+        <td>
+            <img src="/img/@item.WImg" />
+        </td>
+        <td>
+            @Html.ActionLink("修改", "WithsEdit", new { id = item.ID })
+            @Html.ActionLink("删除", "WithsDelete", new { id = item.ID })
+        </td>
+    </tr>
+        }
+
+    </table>
+</body>
+</html>
